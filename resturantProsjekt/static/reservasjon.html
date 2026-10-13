@@ -1,43 +1,82 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="no">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Reserver Bord - KULTI Restaurant</title>
+    <link rel="stylesheet" href="reservasjon.css">
 </head>
-<link rel="stylesheet" href="reservasjon.css">
 
 <body>
-    <ul>
-        <li id="home"><a href="index.html">HOME</a></li>
-        <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
-        <li><a href="rateservice.html">RATE SERVICE</a></li>
-        <li><a href="omoss.html">OM OSS</a></li>
-    </ul>
-    <div id="inputBox">
-        <h1 id="reservasjonEl">Reservasjon</h1>
-        <label>Navn</label>
-        <br><br>
-        <input size="60" id="navnInputEl">
-        <br><br>
-        <label>Adresse</label>
-        <br><br>
-        <input size="60" id="adresseInputEl">
-        <br><br>
-        <label>Telefonnummer</label>
-        <br><br>
-        <input size="60" id="telefonInputEl">
-        <br><br>
-        <label>Bord for hvor mange</label>
-        <br><br>
-        <input size="60" id="bordInputEl">
-        <br><br>
-        <button id="reservasjonButtonEl">Submit</button>
-        <h2 id="resultatEl"></h2>
-    </div>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="nav-brand">KULTI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HJEM</a></li>
+                <li><a href="omoss.html">OM OSS</a></li>
+                <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
+                <li><a href="reservasjon.html" class="active" aria-current="page">RESERVASJON</a></li>
+                <li><a href="rateservice.html">RATE SERVICE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="skjema-container">
+        <div class="reservasjon-kort">
+            <h1>Reserver Bord</h1>
+            <p class="skjema-subtittel">Fyll ut feltene under for å reservere bord hos oss. Felt merket * er påkrevd.</p>
+
+            <form id="reservasjonForm" novalidate>
+                <div class="form-gruppe">
+                    <label for="navnInputEl">Fullt navn *</label>
+                    <input type="text" id="navnInputEl" name="navn" autocomplete="name" maxlength="80"
+                        placeholder="F.eks. Kari Nordmann" required>
+                </div>
+
+                <div class="form-gruppe">
+                    <label for="adresseInputEl">Adresse</label>
+                    <input type="text" id="adresseInputEl" name="adresse" autocomplete="street-address" maxlength="120"
+                        placeholder="F.eks. Storgata 1, Oslo">
+                </div>
+
+                <div class="form-gruppe">
+                    <label for="telefonInputEl">Telefonnummer *</label>
+                    <input type="tel" id="telefonInputEl" name="telefon" autocomplete="tel" maxlength="20"
+                        placeholder="F.eks. 98765432" required>
+                </div>
+
+                <div class="form-gruppe">
+                    <label for="bordInputEl">Antall personer *</label>
+                    <input type="number" id="bordInputEl" name="antall" min="1" max="30" step="1" value="2" required>
+                </div>
+
+                <button type="submit" id="reservasjonButtonEl">Bekreft Reservasjon</button>
+            </form>
+
+            <div id="suksessBoks" class="suksess-boks" role="status" aria-live="polite" hidden>
+                <div class="resultat-ikon suksess-ikon" aria-hidden="true">✓</div>
+                <h3>Reservasjon bekreftet!</h3>
+                <p id="suksessTekst"></p>
+                <div class="resultat-hint">
+                    Tips: Ta vare på bestillingsnummeret for å se reservasjonen din under <strong>«Hent bestilling»</strong>.
+                </div>
+            </div>
+
+            <div id="feilBoks" class="feil-boks" role="alert" hidden>
+                <div class="resultat-ikon feil-ikon" aria-hidden="true">✕</div>
+                <h3>Reservasjonen ble ikke lagret</h3>
+                <div id="feilTekst"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Statsråd Mathiesens vei 25, 0594 Oslo | Tlf: 555-555-55 | Eiere: Duc, Rethusan og Rasmus</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="reservasjon.js"></script>
 </body>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="reservasjon.js"></script>
 
 </html>

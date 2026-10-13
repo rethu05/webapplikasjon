@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="no">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>KULTI Restaurant - En reise gjennom mat</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -13,128 +13,147 @@
 
     <div class="w3-animate-opacity">
 
-        <ul>
-            <li><a href="omoss.html">OM OSS</a></li>
-            <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
-            <li><a href="reservasjon.html">RESERVASJON</a></li>
-            <li><a href="rateservice.html">RATE SERVICE</a></li>
-        </ul>
-        <div id="cookiesjekk">
-            <h2>Cookies</h2>
-            <p>Denne nettsiden bruker cookies for å fungere. Godtar du at nettsiden lagrer cookies?</p>
-            <button id="jaKnapp">JA</button>
-            <button id="neiKnapp">NEI</button>
-        </div>
-        <div class="introBilde">
-
-            <div class="intro">
-                <h1 class="introBildeTekst">KULTI er en restaurant åpent for alle sammen!</h1>
-                <button id="knapp" class="knapp"><img src="/bilde/infoknapp.jpg" class="infoKnapp" alt="bilde av en info knapp" height="70vh" width="70vw"></button>
+        <nav>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-brand">KULTI</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" aria-current="page">HJEM</a></li>
+                    <li><a href="omoss.html">OM OSS</a></li>
+                    <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
+                    <li><a href="reservasjon.html">RESERVASJON</a></li>
+                    <li><a href="rateservice.html">RATE SERVICE</a></li>
+                </ul>
             </div>
+        </nav>
 
+        <div id="cookiesjekk">
+            <div class="cookie-content">
+                <h2>Cookies på KULTI</h2>
+                <p>Denne nettsiden bruker informasjonskapsler (cookies) for å gi deg en bedre opplevelse. Godtar du at nettsiden lagrer cookies?</p>
+                <div class="cookie-buttons">
+                    <button id="jaKnapp">Godta</button>
+                    <button id="neiKnapp">Avslå</button>
+                </div>
+            </div>
         </div>
+
+        <div class="introBilde">
+            <div class="intro">
+                <h1 class="introBildeTekst">KULTI er en restaurant åpen for alle sammen!</h1>
+                <button id="knapp" class="knapp" aria-label="Informasjon om KULTI">
+                    <img src="bilde/infoknapp.jpg" class="infoKnapp" alt="Info knapp">
+                </button>
+            </div>
+        </div>
+
         <div id="popup">
+            <button id="lukkPopup" class="lukk-knapp" aria-label="Lukk popup">&times;</button>
             <h2>Velkommen til KULTI!</h2>
-            <p>Kulti åpnet i 2023, vi er veldig opptatt av inkludering, frihet og ikke minst glede. Vi prioriteter våre kunder og sørger for at maten skal være tilpassende for alle sammen. <br> Dette gjør vi ved å lage en fleksibel meny med mat fra forskjellige land og kulturer. Fra mildt til sterkt, salt til sukker, varmt til kaldt mat. Vi har alt i kjøkkenet og med profesjonelle kokker som har utforsket flere kulturer gjennom mat! <br><br>
-                Takk for at du brukte tiden din på å lese gjennom! Reserver bord hos oss, så får du delta i reisen gjennom mat.</p>
+            <p>Kulti åpnet i 2023, og vi er veldig opptatt av inkludering, frihet og ikke minst matglede. Vi prioriterer våre kunder og sørger for at maten er tilpasset alle sammen.</p>
+            <p>Dette gjør vi ved å lage en fleksibel meny med mat fra forskjellige land og kulturer – fra mildt til sterkt, salt til søtt, varme og kalde retter. Vi har et profesjonelt kjøkken med kokker som har utforsket ulike kulturer gjennom mat!</p>
+            <p>Takk for at du besøker oss! Reserver gjerne et bord, så får du delta i reisen gjennom mat.</p>
         </div>
+
         <br>
         <div id="værsågod">
-            <h1> Vi har flere utvalg av menyen vår! <h2> Sett musepekeren over matretten for å finne navnet på retten og prisen.</h2>
-            </h1> <br>
+            <h1>Vi har et variert utvalg på menyen vår!</h1>
+            <h2>Hold musepekeren over matretten for å se navn og pris.</h2>
         </div>
 
         <div id="meny">
             <div class="container">
-                <img src="../bilde/bilde1.jpg" height="400px" width="400">
+                <img src="bilde/bilde1.jpg" alt="Sommerruller" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">
-                        Sommeruller, 120kr.
-                    </div>
+                    <div class="text">Sommerruller, 120 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde2.jpg" height="400px" width="400">
+                <img src="bilde/bilde2.jpg" alt="Banh Mi" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Banh Mi, 60kr.</div>
+                    <div class="text">Banh Mi, 60 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde3.jpg" height="400px" width="400">
+                <img src="bilde/bilde3.jpg" alt="Pho Ga" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Pho Ga, 150 kr.</div>
+                    <div class="text">Pho Ga, 150 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde4.jpg" height="400px" width="400">
+                <img src="bilde/bilde4.jpg" alt="Chicken Biryani" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Chicken Biryani, 140 kr.</div>
+                    <div class="text">Chicken Biryani, 140 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde5.jpg" height="400px" width="400">
+                <img src="bilde/bilde5.jpg" alt="Samosa" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Samosa, 40kr.</div>
+                    <div class="text">Samosa, 40 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde6.jpg" height="400px" width="400">
+                <img src="bilde/bilde6.jpg" alt="Butter Chicken" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Butter Chicken, 150 kr.</div>
+                    <div class="text">Butter Chicken, 150 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde7.jpg" height="400px" width="400">
+                <img src="bilde/bilde7.jpg" alt="Margarita Pizza" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Margarita, 130 kr.</div>
+                    <div class="text">Margarita, 130 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde8.jpg" height="400px" width="400">
+                <img src="bilde/bilde8.jpg" alt="Pasta Carbonara" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Pasta Carbonara, 120 kr.</div>
+                    <div class="text">Pasta Carbonara, 120 kr</div>
                 </div>
             </div>
             <div class="container">
-                <img src="../bilde/bilde9.jpg" height="400px" width="400">
+                <img src="bilde/bilde9.jpg" alt="Lasagne" class="meny-bilde">
                 <div class="overlay">
-                    <div class="text">Lasagna, 110 kr.</div>
+                    <div class="text">Lasagna, 110 kr</div>
                 </div>
             </div>
         </div>
-        <br><br>
-        <div id="footer">
-            <div>
-                <h2 id="footerTittel">Mer om navnet KULTI</h2>
-                <h4 id="footerTekst">KULTI skal representere det flerkulturelle samfunnet. Norge er et land med samfunn som består av to eller flere grupper som betrakter seg selv, og anerkjennes av andre, som kulturelt forskjellige fra hverandre.</h4>
-            </div>
-            <div>
-                <h2 id="footerTittel">Ikke gå glipp av nyheter!</h2>
-                <div id="kontakter"><a href="https://www.facebook.com/"><img id="facebook" src="bilde/facebook.png" height="50" width="75"></a>
-                    <h4 id="footerTekst">Lik oss på Facebook!</h4>
-                </div>
-                <div id="kontakter"><a id=twitter href="https://www.twitter.com/"><img id="twitter" src="bilde/twitter.png" height="42" width="42"></a>
-                    <h4 id="twitterTekst">Følg oss på Twitter!</h4>
-                </div>
-                <div id="kontakter"><a id=instagram href="https://www.instagram.com/"><img id="instagram" src="bilde/instagram.png" height="42" width="42"></a>
-                    <h4 id="twitterTekst">Følg oss på Instagram!</h4>
-                </div>
-            </div>
-            <div>
-                <h2 id="footerTittel">Kontaktinformasjon</h2>
-                <h4 id="footerTekst">Addressen: Statsråd Mathiesens vei 25, 0594 Oslo
-                </h4>
-                <h4 id="footerTekst">Telefonnummer: 555-555-55 </h4>
-                <footer>
-                    <h4 id="footerTekst">Eierne av KULTI: Duc, Rethusan og Rasmus</h4>
-                    <h4 id="mailTekst"><a href="mailto:KULTI-Kontakt@gmail.com">KULTI-Kontakt@gmail.com</a></h4>
-                </footer>
 
+        <footer id="footer">
+            <div class="footer-kolonne">
+                <h2 class="footerTittel">Mer om navnet KULTI</h2>
+                <p class="footerTekst">KULTI skal representere det flerkulturelle samfunnet. Norge er et land som består av ulike kulturer og tradisjoner, og gjennom mat bringer vi folk sammen.</p>
             </div>
-        </div>
+            <div class="footer-kolonne">
+                <h2 class="footerTittel">Ikke gå glipp av nyheter!</h2>
+                <div class="sosial-rad">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="sosial-ikon facebook" src="bilde/facebook.png" alt="Facebook">
+                    </a>
+                    <span class="footerTekst">Lik oss på Facebook!</span>
+                </div>
+                <div class="sosial-rad">
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="sosial-ikon twitter" src="bilde/twitter.png" alt="Twitter">
+                    </a>
+                    <span class="footerTekst">Følg oss på Twitter!</span>
+                </div>
+                <div class="sosial-rad">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img class="sosial-ikon instagram" src="bilde/instagram.png" alt="Instagram">
+                    </a>
+                    <span class="footerTekst">Følg oss på Instagram!</span>
+                </div>
+            </div>
+            <div class="footer-kolonne">
+                <h2 class="footerTittel">Kontaktinformasjon</h2>
+                <p class="footerTekst"><strong>Adresse:</strong> Statsråd Mathiesens vei 25, 0594 Oslo</p>
+                <p class="footerTekst"><strong>Telefon:</strong> 555-555-55</p>
+                <p class="footerTekst"><strong>Eiere:</strong> Duc, Rethusan og Rasmus</p>
+                <p class="mailTekst"><a href="mailto:KULTI-Kontakt@gmail.com">KULTI-Kontakt@gmail.com</a></p>
+            </div>
+        </footer>
     </div>
 
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>

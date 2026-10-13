@@ -1,72 +1,92 @@
-var knapp = document.getElementById("knapp")
-knapp.addEventListener("click", knappTrykk)
-function knappTrykk(){
-  var x = document.getElementById("popup");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-popup.style.display = "none";
-//HJELPEFUNKSJONER FRA W3SCHOOLS FOR Å LAGRE OG HENTE COOKIES
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 120 * 120 * 1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+(function () {
+    "use strict";
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
+    /* ---------------- Popup med informasjon om KULTI ---------------- */
+    const infoKnapp = document.getElementById("knapp");
+    const popup = document.getElementById("popup");
+    const lukkPopup = document.getElementById("lukkPopup");
+
+    function settPopupSynlig(synlig) {
+        if (!popup) return;
+        popup.style.display = synlig ? "block" : "none";
+        if (infoKnapp) infoKnapp.setAttribute("aria-expanded", String(synlig));
+        if (synlig && lukkPopup) lukkPopup.focus();
+    }
+
+    if (popup) settPopupSynlig(false);
+
+    if (infoKnapp) {
+        infoKnapp.addEventListener("click", () => settPopupSynlig(popup.style.display !== "block"));
+    }
+    if (lukkPopup) {
+        lukkPopup.addEventListener("click", () => {
+            settPopupSynlig(false);
+            if (infoKnapp) infoKnapp.focus();
+        });
+    }
+
+    // Lukk popup med Escape eller ved klikk utenfor
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && popup && popup.style.display === "block") settPopupSynlig(false);
+    });
+    document.addEventListener("click", (e) => {
+        if (!popup || popup.style.display !== "block") return;
+        if (!popup.contains(e.target) && !(infoKnapp && infoKnapp.contains(e.target))) {
+            settPopupSynlig(false);
         }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+    });
+
+    /* ---------------- Cookies ---------------- */
+    function setCookie(navn, verdi, dager) {
+        try {
+            const utløper = new Date(Date.now() + dager * 24 * 60 * 60 * 1000).toUTCString();
+            document.cookie = `${navn}=${encodeURIComponent(verdi)};expires=${utløper};path=/;SameSite=Lax`;
+        } catch (err) {
+            // Kan skje hvis nettleseren blokkerer cookies helt
+            console.warn("Kunne ikke lagre cookie:", err);
         }
     }
-    return "";
-}
 
-//Sjekk om brukeren har godtatt cookies fra før. Hvis brukeren har gjort det, så trenger du ikke å spørre igjen om dette.
-//Hvis cookie finnes
-if (getCookie("cookiesjekk") == "OK") {
-    //Gjem cookiesjekken
-    //Henter cookiesjekk inn i js
-    var cookiesjekkEl = document.getElementById("cookiesjekk");
-    //Gjem den
-    cookiesjekkEl.style.display = "none";
-    //Vis alle de der tekstene
-}
-//Hent ja-knappen    
-var jaKnapp = document.getElementById("jaKnapp");
-//Event listener på klikk
-jaKnapp.addEventListener("click", lagreCookies)
-//funksjon som lagrer riktig cookie
-function lagreCookies() {
-    console.log("Alt er på plass!")
-    //Navnet på cookien blir cookiesjekk
-    //Verdien på cookien blir "OK"
-    setCookie("cookiesjekk", "OK", 14);
-    console.log(getCookie("cookiesjekk"))
-    //Henter cookiesjekk inn i js
-    var cookiesjekkEl = document.getElementById("cookiesjekk");
-    //Gjem den
-    cookiesjekkEl.style.display = "none";
-}
-//hent nei-knappen  
-//Hent ja-knappen    
-var neiKnapp = document.getElementById("neiKnapp");
-//Event listener på klikk
-neiKnapp.addEventListener("click", håndterNei);
+    function getCookie(navn) {
+        try {
+            const prefiks = navn + "=";
+            for (const del of document.cookie.split(";")) {
+                const c = del.trim();
+                if (c.startsWith(prefiks)) {
+                    // decodeURIComponent kaster URIError ved ødelagt verdi – derfor try/catch
+                    return decodeURIComponent(c.substring(prefiks.length));
+                }
+            }
+        } catch (err) {
+            console.warn("Kunne ikke lese cookie:", err);
+        }
+        return "";
+    }
 
-function håndterNei() {
-    var cookiesjekkEl = document.getElementById("cookiesjekk");
-    //Gjem den
-    cookiesjekkEl.style.display = "none";
-}
+    const cookiesjekkEl = document.getElementById("cookiesjekk");
+    const samtykke = getCookie("cookiesjekk");
+
+    if (cookiesjekkEl) {
+        cookiesjekkEl.style.display = samtykke === "OK" || samtykke === "AVSLATT" ? "none" : "block";
+
+        const skjulBanner = () => {
+            cookiesjekkEl.style.display = "none";
+        };
+
+        const jaKnapp = document.getElementById("jaKnapp");
+        if (jaKnapp) {
+            jaKnapp.addEventListener("click", () => {
+                setCookie("cookiesjekk", "OK", 30);
+                skjulBanner();
+            });
+        }
+
+        const neiKnapp = document.getElementById("neiKnapp");
+        if (neiKnapp) {
+            neiKnapp.addEventListener("click", () => {
+                setCookie("cookiesjekk", "AVSLATT", 7);
+                skjulBanner();
+            });
+        }
+    }
+})();

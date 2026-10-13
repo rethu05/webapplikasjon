@@ -1,62 +1,273 @@
-body {
-    background-color: #f7df68;
-    align-items: center;
+* {
+    box-sizing: border-box;
 }
 
-#inputBox {
-    text-align: center;
-    font-family:monospace;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7df68;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigasjonsbar */
+nav {
+    background-color: #3a4f99;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-bar {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f7df68;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 8px 16px;
+    color: #f7df68;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(247, 223, 104, 0.2);
+    opacity: 0.9;
+}
+
+.nav-links a.active {
+    background-color: #f7df68;
     color: #3a4f99;
 }
 
-#reservasjonButtonEl:hover {
-    transition-duration: 0.4s;
-    background-color: #3a4f99;
-    color:white;
+/* Skjema container */
+.skjema-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.reservasjon-kort {
+    background-color: #ffffff;
+    max-width: 520px;
+    width: 100%;
+    padding: 36px 32px;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-top: 6px solid #3a4f99;
+}
+
+.reservasjon-kort h1 {
+    margin: 0 0 6px;
+    color: #3a4f99;
+    font-size: 28px;
+    text-align: center;
+}
+
+.skjema-subtittel {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.form-gruppe {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-gruppe label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-gruppe input {
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-gruppe input:focus {
+    outline: none;
+    border-color: #3a4f99;
+    box-shadow: 0 0 0 3px rgba(58, 79, 153, 0.15);
+}
+
+.form-gruppe input.ugyldig {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.form-gruppe input.ugyldig:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.bestillingsnr {
+    font-size: 1.25em;
+    color: #3a4f99;
+}
+
+.feil-boks ul {
+    text-align: left;
+    color: #b91c1c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#reservasjonButtonEl:disabled {
+    opacity: 0.7;
+    cursor: wait;
 }
 
 #reservasjonButtonEl {
-    width: 150px;
-    height:35px;
-    font-size: 15px;
-    border-radius: 8px;
-    padding: 10px 20px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3a4f99;
     width: 100%;
-    height: 15%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #3a4f99;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 8px;
 }
 
-li {
-    float: right;
-    padding-right: 100px;
-    padding-top: 20px;
+#reservasjonButtonEl:hover {
+    background-color: #2c3c74;
 }
 
-li a:hover {
-    opacity: 0.5
+#reservasjonButtonEl:active {
+    transform: scale(0.99);
 }
 
-li a {
-    display: block;
-    padding: 8px;
-    color: #f7df68;
-}
-#home {
-    float:left;
+/* Resultat bokser */
+.resultat-ikon {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin: 0 auto 12px;
 }
 
-body {
-    background-color: #f7df68;
-}
-#tekst {
-    display: flex;
-    flex-direction: column;
+.suksess-boks {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
     text-align: center;
+}
+
+.suksess-ikon {
+    background-color: #10b981;
+}
+
+.suksess-boks h3 {
+    margin: 0 0 8px;
+    color: #065f46;
+    font-size: 18px;
+}
+
+.suksess-boks p {
+    color: #047857;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+.feil-boks {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    text-align: center;
+}
+
+.feil-ikon {
+    background-color: #ef4444;
+}
+
+.feil-boks h3 {
+    margin: 0 0 8px;
+    color: #991b1b;
+    font-size: 18px;
+}
+
+.feil-boks p {
+    color: #b91c1c;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.resultat-hint {
+    font-size: 13px;
+    color: #4b5563;
+    border-top: 1px solid #d1fae5;
+    padding-top: 10px;
+}
+
+/* Footer */
+#footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+#footer p {
+    margin: 0;
 }

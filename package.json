@@ -1,0 +1,9 @@
+{
+  "name": "webapplikasjon-2023-ny-versjon",
+  "version": "1.0.0",
+  "description": "Root runner for KULTI restaurant webapp",
+  "scripts": {
+    "start": "npm --prefix resturantProsjekt start",
+    "dev": "npm --prefix resturantProsjekt run dev"
+  }
+}

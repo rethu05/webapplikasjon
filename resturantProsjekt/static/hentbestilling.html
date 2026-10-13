@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="no">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Hent Bestilling - KULTI Restaurant</title>
+    <link rel="stylesheet" href="hentbestilling.css">
 </head>
-<link rel="stylesheet" href="hentbestilling.css">
+
 <body>
-    <ul>
-        <li id="home"><a href="index.html">HOME</a></li>
-        <li><a href="reservasjon.html">RESERVASJON</a></li>
-        <li><a href="rateservice.html">RATE SERVICE</a></li>
-        <li><a href="omoss.html">OM OSS</a></li>
-    </ul>
-    <div id="inputBox">
-        <h1>Hent bestillingen din under</h1>
-        <input size="60" type=number id="hentBestillingEl">
-        <p>Klikk knappen under for å hente bestillingen</p>
-        <button id=hentKnappEl>Hent Bestilling</button>
-        <div id="resultatBestillingEl"></div>
-    </div>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="nav-brand">KULTI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HJEM</a></li>
+                <li><a href="omoss.html">OM OSS</a></li>
+                <li><a href="hentbestilling.html" class="active" aria-current="page">HENT BESTILLING</a></li>
+                <li><a href="reservasjon.html">RESERVASJON</a></li>
+                <li><a href="rateservice.html">RATE SERVICE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="skjema-container">
+        <div class="hent-kort">
+            <h1>Finn din reservasjon</h1>
+            <p class="skjema-subtittel">Skriv inn bestillingsnummeret ditt for å se detaljene om bordreservasjonen.</p>
+
+            <form id="hentForm" novalidate>
+                <label for="hentBestillingEl" class="skjult-label">Bestillingsnummer</label>
+                <div class="sok-rad">
+                    <input type="text" id="hentBestillingEl" inputmode="numeric" autocomplete="off" maxlength="10"
+                        placeholder="F.eks. 82854" required>
+                    <button type="submit" id="hentKnappEl">Hent Bestilling</button>
+                </div>
+            </form>
+
+            <div id="resultatBestillingEl" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Statsråd Mathiesens vei 25, 0594 Oslo | Tlf: 555-555-55 | Eiere: Duc, Rethusan og Rasmus</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="hentbestilling.js"></script>
 </body>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="hentbestilling.js"></script>
+
 </html>

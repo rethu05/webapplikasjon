@@ -1,37 +1,201 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3a4f99;
-    width: 100%;
-    height: 15%;
-}
-
-li {
-    float: right;
-    padding-right: 100px;
-    padding-top: 20px;
-}
-
-li a:hover {
-    opacity: 0.5
-}
-
-li a {
-    display: block;
-    padding: 8px;
-    color: #f7df68;
-}
-#home {
-    float:left;
+* {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: #f7df68;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
 }
-#tekst {
+
+/* Navigasjonsbar */
+nav {
+    background-color: #3a4f99;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-bar {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f7df68;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 8px 16px;
+    color: #f7df68;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(247, 223, 104, 0.2);
+    opacity: 0.9;
+}
+
+.nav-links a.active {
+    background-color: #f7df68;
+    color: #3a4f99;
+}
+
+/* Hovedinnhold */
+.hovedinnhold {
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    padding: 0 24px;
+}
+
+.omoss-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.omoss-header h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    color: #3a4f99;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.ingress {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.team-kort {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #3a4f99;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-kort:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.kort-flagg {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.team-kort h2 {
+    margin: 0 0 4px;
+    color: #3a4f99;
+    font-size: 26px;
+}
+
+.rolle {
+    display: inline-block;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.team-kort p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.sitat {
+    margin-top: auto;
+    font-style: italic;
+    color: #3a4f99 !important;
+    font-weight: 500;
+    border-left: 3px solid #f7df68;
+    padding-left: 12px;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 48px 32px 32px;
+}
+
+.footer-kolonne {
+    flex: 1 1 250px;
+}
+
+.footerTittel {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.footerTekst {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.mailTekst a {
+    color: #f7df68;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mailTekst a:hover {
+    text-decoration: underline;
 }

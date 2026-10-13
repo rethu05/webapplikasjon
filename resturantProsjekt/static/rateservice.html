@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="no">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Vurder Vår Service - KULTI Restaurant</title>
     <link rel="stylesheet" href="rateservice.css">
 </head>
 
 <body>
-    <ul>
-        <li id="home"><a href="index.html">HOME</a></li>
-        <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
-        <li><a href="reservasjon.html">RESERVASJON</a></li>
-        <li><a href="omoss.html">OM OSS</a></li>
-    </ul>
-    <div>
-        <h2>Rate servicen vår fra 1-5 stjerner nedenfor!</h2>
-        <div class="rating">
-            <input type="radio" id="star5" name="rating" value="5" />
-            <label for="star5" title="5 stars">5</label>
-            <input type="radio" id="star4" name="rating" value="4" />
-            <label for="star4" title="4 stars">4</label>
-            <input type="radio" id="star3" name="rating" value="3" />
-            <label for="star3" title="3 stars">3</label>
-            <input type="radio" id="star2" name="rating" value="2" />
-            <label for="star2" title="2 stars">2</label>
-            <input type="radio" id="star1" name="rating" value="1" />
-            <label for="star1" title="1 star">1 </label>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="nav-brand">KULTI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HJEM</a></li>
+                <li><a href="omoss.html">OM OSS</a></li>
+                <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
+                <li><a href="reservasjon.html">RESERVASJON</a></li>
+                <li><a href="rateservice.html" class="active" aria-current="page">RATE SERVICE</a></li>
+            </ul>
         </div>
-        <button onclick="submitRating()">Submit Rating</button>
-    </div>
+    </nav>
+
+    <main class="skjema-container">
+        <div class="rating-kort">
+            <h1>Hvordan var opplevelsen din?</h1>
+            <p class="skjema-subtittel">Gi oss en vurdering fra 1 til 5 stjerner, og fortell oss gjerne hva du syntes!</p>
+
+            <form id="ratingForm" novalidate>
+                <fieldset class="stjerne-omrade">
+                    <legend class="skjult-label">Velg antall stjerner</legend>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" />
+                        <label for="star5" title="5 stjerner">★</label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stjerner">★</label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stjerner">★</label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stjerner">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 stjerne">★</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-gruppe">
+                    <label for="tilbakemeldingEl">Valgfri kommentar</label>
+                    <textarea id="tilbakemeldingEl" rows="4" maxlength="1000"
+                        placeholder="Hva likte du best, eller hva kan vi forbedre?"></textarea>
+                    <small id="tegnTeller" class="tegn-teller">0 / 1000</small>
+                </div>
+
+                <button type="submit" id="ratingKnappEl">Send Vurdering</button>
+            </form>
+
+            <div id="ratingFeilBoks" class="feil-melding" role="alert" hidden></div>
+
+            <div id="ratingTakkBoks" class="takk-boks" role="status" aria-live="polite" hidden>
+                <div class="takk-ikon" aria-hidden="true">★</div>
+                <h3>Tusen takk for tilbakemeldingen!</h3>
+                <p id="takkTekst"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Statsråd Mathiesens vei 25, 0594 Oslo | Tlf: 555-555-55 | Eiere: Duc, Rethusan og Rasmus</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="rateservice.js"></script>
 </body>
-<script src="rateservice.js"></script>
 
 </html>
