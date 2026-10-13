@@ -1,0 +1,188 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a4f99;
+    width: 100%;
+    height: 15%;
+}
+
+li {
+    float: right;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+
+li a:hover {
+    opacity: 0.5
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    color: #f7df68;
+}
+
+body {
+    background-color: #f7df68;
+}
+
+.introBilde {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px;
+    background-image: url(/bilde/matbilde.jpg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introBildeTekst {
+    background-color: black;
+    opacity: 0.75;
+    width: 60%;
+    margin-top: 32%;
+    margin-left: 20%;
+}
+
+.infoKnapp {
+    opacity: 0.7;
+}
+
+.knapp {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 0%;
+    margin-top: -5%;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+}
+
+#popup {
+    position: absolute;
+    bottom: 190px;
+    left: 325px;
+    width: 50%;
+    height: 50%;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #3a4f99;
+    color: #f7df68;
+    text-shadow: 2px 2px 5px;
+}
+
+#værsågod {
+    text-align: center;
+    color: #3a4f99;
+    text-shadow: 2px 2px 4px;
+}
+
+#cookiesjekk {
+    position: absolute;
+    background-color:   red;
+    width: 100vw;
+    height: 60vh;
+    padding: 2%;
+    text-align: center;
+    color: black;
+    margin-top: 2%
+}
+#meny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+#meny > div {
+  width: 400px;
+  margin: 20px;
+  text-align: center;
+  line-height: 400px;
+  font-size: 30px;
+    
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3a4f99;
+  }
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #f7df68;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #0f0f0f;
+}
+#footerTittel {
+    color: white;
+}
+#footerTekst {
+    color: gray;
+}
+#footer > div{
+    width: 30%;
+}
+#kontakter {
+    display: flex;
+    flex-direction: row;
+}
+#twitter {
+    margin-left: 3.5%;
+}
+#twitterTekst {
+    margin-left: 4.6%;
+    color: gray;
+}
+#facebook:hover{
+    opacity: 0.5;
+}
+#twitter:hover{
+    opacity: 0.5;
+}
+
+#instagram{
+    margin-left: 3.5%;
+}
+#instagram:hover{
+    opacity: 0.5;
+}   
+#mailTekst {
+    color: white;
+    text-align: center;
+}

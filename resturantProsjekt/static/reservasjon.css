@@ -1,0 +1,62 @@
+body {
+    background-color: #f7df68;
+    align-items: center;
+}
+
+#inputBox {
+    text-align: center;
+    font-family:monospace;
+    color: #3a4f99;
+}
+
+#reservasjonButtonEl:hover {
+    transition-duration: 0.4s;
+    background-color: #3a4f99;
+    color:white;
+}
+
+#reservasjonButtonEl {
+    width: 150px;
+    height:35px;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a4f99;
+    width: 100%;
+    height: 15%;
+}
+
+li {
+    float: right;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+
+li a:hover {
+    opacity: 0.5
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    color: #f7df68;
+}
+#home {
+    float:left;
+}
+
+body {
+    background-color: #f7df68;
+}
+#tekst {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

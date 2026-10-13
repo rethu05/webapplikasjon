@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<link rel="stylesheet" href="hentbestilling.css">
+<body>
+    <ul>
+        <li id="home"><a href="index.html">HOME</a></li>
+        <li><a href="reservasjon.html">RESERVASJON</a></li>
+        <li><a href="rateservice.html">RATE SERVICE</a></li>
+        <li><a href="omoss.html">OM OSS</a></li>
+    </ul>
+    <div id="inputBox">
+        <h1>Hent bestillingen din under</h1>
+        <input size="60" type=number id="hentBestillingEl">
+        <p>Klikk knappen under for å hente bestillingen</p>
+        <button id=hentKnappEl>Hent Bestilling</button>
+        <div id="resultatBestillingEl"></div>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="hentbestilling.js"></script>
+</html>

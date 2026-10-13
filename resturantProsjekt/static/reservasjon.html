@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<link rel="stylesheet" href="reservasjon.css">
+
+<body>
+    <ul>
+        <li id="home"><a href="index.html">HOME</a></li>
+        <li><a href="hentbestilling.html">HENT BESTILLING</a></li>
+        <li><a href="rateservice.html">RATE SERVICE</a></li>
+        <li><a href="omoss.html">OM OSS</a></li>
+    </ul>
+    <div id="inputBox">
+        <h1 id="reservasjonEl">Reservasjon</h1>
+        <label>Navn</label>
+        <br><br>
+        <input size="60" id="navnInputEl">
+        <br><br>
+        <label>Adresse</label>
+        <br><br>
+        <input size="60" id="adresseInputEl">
+        <br><br>
+        <label>Telefonnummer</label>
+        <br><br>
+        <input size="60" id="telefonInputEl">
+        <br><br>
+        <label>Bord for hvor mange</label>
+        <br><br>
+        <input size="60" id="bordInputEl">
+        <br><br>
+        <button id="reservasjonButtonEl">Submit</button>
+        <h2 id="resultatEl"></h2>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="reservasjon.js"></script>
+
+</html>

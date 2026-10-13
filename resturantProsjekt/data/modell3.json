@@ -1,0 +1,216 @@
+{
+    "reservasjon1": {
+      "navn": "Rethusan Ketheeswaran",
+      "adresse": "Olav Nygaards vei 15",
+      "telefon": 42560375,
+      "bordnummer": 16,
+      "dato": "XXXXXXX",
+      "bordforhvormange": "Bord for 8 stykker"
+    },
+    "reservasjon2": {
+      "navn": "Manh Duc Nguyen",
+      "adresse": "Gøtge veien 32",
+      "telefon": 45623456,
+      "bornnummer": 15,
+      "dat0": "XXXXXXX",
+      "bordforhvormange": "Bord for 2 stykker"
+    },
+    "reservasjon21": {
+      "navn": "pave franz",
+      "adresse": "adresse",
+      "bordnummer": 13,
+      "telefon": "23435235",
+      "dato": "2023-04-30T13:18:40.754Z",
+      "bordforhvormange": "3424"
+    },
+    "reservasjon31": {
+      "navn": "Manh Duc Nguyen",
+      "adresse": "Gøtgeveien 69",
+      "bordnummer": 5,
+      "telefon": "96893584",
+      "dato": "2023-04-30T13:22:23.286Z",
+      "bordforhvormange": "2"
+    },
+    "reservasjon41": {
+      "navn": "Manh Duc Nguyen",
+      "adresse": "Gøtgeveien 69",
+      "bordnummer": 10,
+      "telefon": "96893584",
+      "dato": "2023-04-30T13:22:25.694Z",
+      "bordforhvormange": "2"
+    },
+    "reservasjon51": {
+      "navn": "Tharrini",
+      "adresse": "Bølerveien 13B",
+      "bordnummer": 1,
+      "telefon": "47358986",
+      "dato": "2023-04-30T13:28:20.499Z",
+      "bordforhvormange": "2"
+    },
+    "reservasjon61": {
+      "navn": "Kethees",
+      "adresse": "Møllerveien",
+      "bordnummer": 13,
+      "telefon": "4578973",
+      "dato": "2023-04-30T14:08:18.962Z",
+      "bordforhvormange": "4"
+    },
+    "reservasjon71": {
+      "navn": "Rethusan Ketheeswaran",
+      "adresse": "Bølerveien 13B",
+      "bordnummer": 11,
+      "telefon": "47234204",
+      "dato": "2023-04-30T19:49:40.225Z",
+      "bordforhvormange": "4"
+    },
+    "reservasjon81": {
+      "navn": "Duc",
+      "adresse": "OKOK",
+      "bordnummer": 5,
+      "telefon": "40301",
+      "dato": "2023-05-01T09:54:14.123Z",
+      "bordforhvormange": "3"
+    },
+    "reservasjon91": {
+      "navn": "Niklas",
+      "adresse": "tøyenveien",
+      "bordnummer": 4,
+      "telefon": "3848538",
+      "dato": "2023-05-x01T10:41:06.206Z",
+      "bordforhvormange": "5"
+    },
+    "reservasjon101": {
+      "navn": "Abe",
+      "adresse": "Kolboltn",
+      "bordnummer": 3,
+      "telefon": "12345678",
+      "dato": "2023-05-01T18:43:12.464Z",
+      "bordforhvormange": "10",
+      "bestillingsNr": 94722
+    },
+    "reservasjon111": {
+      "navn": "Abe",
+      "adresse": "Kolboltn",
+      "bordnummer": 14,
+      "telefon": "12345678",
+      "dato": "2023-05-01T18:43:14.229Z",
+      "bordforhvormange": "10",
+      "bestillingsNr": 81341
+    },
+    "reservasjon121": {
+      "navn": "Abe",
+      "adresse": "Kolboltn",
+      "bordnummer": 9,
+      "telefon": "12345678",
+      "dato": "2023-05-01T18:44:20.690Z",
+      "bordforhvormange": "10"
+    },
+    "reservasjon131": {
+      "navn": "Abenayan",
+      "adresse": "Grønvoll",
+      "bordnummer": 2,
+      "telefon": "12345678",
+      "dato": "2023-05-01T18:44:36.545Z",
+      "bordforhvormange": "10"
+    },
+    "reservasjon141": {
+      "navn": "Sofie",
+      "adresse": "Kalbakken",
+      "bordnummer": 18,
+      "telefon": "12345678",
+      "dato": "2023-05-01T18:57:41.163Z",
+      "bordforhvormange": "5",
+      "bestillingsNr": 53260
+    },
+    "reservasjon151": {
+      "navn": "Pål",
+      "adresse": "Karls Gate",
+      "bordnummer": 7,
+      "telefon": "12345678",
+      "dato": "2023-05-01T20:10:33.887Z",
+      "bordforhvormange": "2",
+      "bestillingsNr": 65436
+    },
+    "reservasjon161": {
+      "navn": "abe",
+      "adresse": "boler",
+      "bordnummer": 10,
+      "telefon": "12345678",
+      "dato": "2023-05-01T20:38:23.092Z",
+      "bordforhvormange": "2",
+      "bestillingsNr": 94447
+    },
+    "reservasjon171": {
+      "navn": "abe",
+      "adresse": "boler",
+      "bordnummer": 8,
+      "telefon": "12345678",
+      "dato": "2023-05-01T20:39:10.827Z",
+      "bordforhvormange": "2",
+      "bestillingsNr": 83012
+    },
+    "reservasjon181": {
+      "navn": "rethusan",
+      "adresse": "mølla",
+      "bordnummer": 18,
+      "telefon": "3434",
+      "dato": "2023-05-01T20:42:52.601Z",
+      "bordforhvormange": "3",
+      "bestillingsNr": 21458
+    },
+    "reservasjon191": {
+      "navn": "rethusan",
+      "adresse": "mølla",
+      "bordnummer": 9,
+      "telefon": "3434",
+      "dato": "2023-05-01T20:43:54.610Z",
+      "bordforhvormange": "3",
+      "bestillingsNr": 87634
+    },
+    "reservasjon201": {
+      "navn": "rethusan",
+      "adresse": "mølla",
+      "bordnummer": 13,
+      "telefon": "3434",
+      "dato": "2023-05-01T20:45:36.120Z",
+      "bordforhvormange": "3",
+      "bestillingsNr": 89060
+    },
+    "reservasjon211": {
+      "navn": "rethusan",
+      "adresse": "mølla",
+      "bordnummer": 15,
+      "telefon": "3434",
+      "dato": "2023-05-01T20:45:40.099Z",
+      "bordforhvormange": "3",
+      "bestillingsNr": 78328
+    },
+    "reservasjon221": {
+      "navn": "rethusan",
+      "adresse": "mølla",
+      "bordnummer": 16,
+      "telefon": "3434",
+      "dato": "2023-05-01T20:45:52.603Z",
+      "bordforhvormange": "3",
+      "bestillingsNr": 47492
+    },
+    "reservasjon231": {
+      "navn": "rethusan",
+      "adresse": "bøler",
+      "bordnummer": 5,
+      "telefon": "213123123",
+      "dato": "2023-05-01T20:47:20.022Z",
+      "bordforhvormange": "4",
+      "bestillingsNr": 8164
+    },
+    "reservasjon241": {
+      "navn": "emil hanssen",
+      "adresse": "romaveien 14b",
+      "bordnummer": 13,
+      "telefon": "34436633",
+      "dato": "2023-05-01T21:49:53.409Z",
+      "bordforhvormange": "66",
+      "bestillingsNr": 38099
+    }
+  }
+  
