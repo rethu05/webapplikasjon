@@ -25,5 +25,14 @@
     "dato": "2023-05-02T12:32:55.142Z",
     "bordforhvormange": "4",
     "bestillingsNr": 82854
+  },
+  "reservasjon4": {
+    "navn": "Testbruker Ola",
+    "adresse": "Karl Johans gate 1",
+    "bordnummer": 9,
+    "telefon": "98765432",
+    "dato": "2026-10-13T21:31:45.600Z",
+    "bordforhvormange": "3",
+    "bestillingsNr": 39237
   }
 }
